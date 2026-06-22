@@ -1,0 +1,11 @@
+---
+# ACS730 Lab 7 — Ansible playbook starter
+# TODO: complete the tasks based on the lab instructions
+- name: Configure web server
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Print hostname
+      ansible.builtin.debug:
+        msg: "Configuring host: {{ inventory_hostname }}"
